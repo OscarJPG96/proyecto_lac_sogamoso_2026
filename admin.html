@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="lacteos sogamoso - pagina web
+    para atencion al usuario lacteos sogamoso.">
+    <meta name="author" content="Oscar Javier Perez Gutierrez">
+    <title>panel administrativo</title>
+</head>
+<body>
+    <!-- ============ BARRA SUPERIOR ============ -->
+<header>
+<a href="index.html">
+            <img src="assets/imagenes/logo_lac-sogamoso.jpg" alt="logo lacteos sogamoso" width="150">
+        </a>
+<nav aria-label="Cuenta de usuario">
+<ul>
+<li>Administrador: Nombre del Usuario</li>
+<li><a href="login.html">Cerrar sesión</a></li>
+</ul>
+</nav>
+</header>
+<!-- ============ MENÚ LATERAL DE MÓDULOS ============ -->
+<aside aria-label="Menú de administración">
+<!-- aside: contenido relacionado pero independiente del flujo principal -->
+<nav aria-label="Módulos del sistema">
+<ul>
+<li><a href="#modulo-usuarios">Usuarios</a></li>
+<li><a href="#modulo-inventario">Inventario</a></li>
+
+SENA - ADSO | Guía de Maquetación HTML
+
+Página 8
+<li><a href="#modulo-ventas">Ventas</a></li>
+<li><a href="#modulo-reportes">Reportes</a></li>
+</ul>
+</nav>
+</aside>
+<!-- ============ CONTENIDO PRINCIPAL ============ -->
+<main>
+<h1>Gestión de Módulos</h1>
+<section id="modulo-usuarios" aria-labelledby="titulo-usuarios">
+<h2 id="titulo-usuarios">Gestión de Usuarios</h2>
+<!-- Formulario para crear un nuevo registro del módulo -->
+<form action="#" method="POST">
+<fieldset>
+<legend>Nuevo usuario</legend>
+
+<div>
+
+<label for="nombre-usuario">Nombre completo</label>
+
+<input type="text" id="nombre-usuario"
+name="nombre-usuario" required>
+</div>
+<div>
+
+<label for="rol-usuario">Rol</label>
+<select id="rol-usuario" name="rol-usuario">
+<option value="admin">Administrador</option>
+<option value="empleado">Empleado</option>
+
+</select>
+</div>
+</fieldset>
+<button type="submit">Guardar usuario</button>
+</form>
+<!-- Tabla de datos: estructura completa y semántica -->
+<table>
+<caption>Listado de usuarios registrados</caption>
+<thead>
+<tr>
+<th scope="col">ID</th>
+<th scope="col">Nombre</th>
+<th scope="col">Rol</th>
+<th scope="col">Acciones</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+
+<td>Nombre de ejemplo</td>
+<td>Administrador</td>
+<td><a href="#">Editar</a> | <a href="#">Eliminar</a></td>
+
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modulo-inventario" aria-labelledby="titulo-inventario">
+<h2 id="titulo-inventario">Gestión de Inventario</h2>
+<table>
+<caption>Listado de productos en inventario</caption>
+<thead>
+<tr>
+<th scope="col">Código</th>
+<th scope="col">Producto</th>
+
+SENA - ADSO | Guía de Maquetación HTML
+
+Página 9
+<th scope="col">Cantidad</th>
+<th scope="col">Precio</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P001</td>
+
+<td>Producto de ejemplo</td>
+<td>25</td>
+<td>$50.000</td>
+
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modulo-ventas" aria-labelledby="titulo-ventas">
+<h2 id="titulo-ventas">Gestión de Ventas</h2>
+<table>
+<caption>Registro de ventas realizadas</caption>
+<thead>
+<tr>
+<th scope="col">Factura</th>
+<th scope="col">Cliente</th>
+<th scope="col">Fecha</th>
+<th scope="col">Total</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-001</td>
+
+<td>Cliente de ejemplo</td>
+<td>2026-09-03</td>
+<td>$120.000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modulo-reportes" aria-labelledby="titulo-reportes">
+<h2 id="titulo-reportes">Reportes</h2>
+<p>Resumen general de la actividad del negocio</p>
+</section>
+</main>
+<footer>
+<p>&copy; 2026 Nombre de la Empresa. Panel administrativo interno.</p>
+</footer>
+</body>
+</html>

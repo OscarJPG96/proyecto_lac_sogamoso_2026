@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio sesion</title>
+    <meta name="description" content="Inicia sesión en el panel de la empresa.">
+    <title>Iniciar Sesión | Nombre de la Empresa</title>
+</head>
+<body>
+<header>
+<a href="index.html">
+            <img src="assets/imagenes/logo_lac-sogamoso.jpg" alt="logo lacteos sogamoso" width="150">
+        </a>
+</header>
+<main>
+<section aria-labelledby="titulo-login">
+<h1 id="titulo-login">Iniciar Sesión</h1>
+<!-- form: define el formulario. action indica a dónde se envían los datos -->
+<form action="#" method="POST">
+<!-- fieldset agrupa campos; legend describe el grupo -->
+<fieldset>
+<legend>Credenciales de acceso</legend>
+<div>
+<label for="correo">Correo electrónico</label>
+
+<!-- El "for" del label debe coincidir con el "id" del input -->
+
+<input type="email" id="correo" name="correo"
+
+SENA - ADSO | Guía de Maquetación HTML
+
+Página 6
+
+placeholder="ejemplo@correo.com" required>
+</div>
+<div>
+<label for="password">Contraseña</label>
+
+<input type="password" id="password" name="password"
+
+required>
+</div>
+<div>
+<input type="checkbox" id="recordar" name="recordar">
+<label for="recordar">Recordarme en este dispositivo</label>
+
+</div>
+</fieldset>
+<button type="submit">Ingresar</button>
+</form>
+<p><a href="#">¿Olvidaste tu contraseña?</a></p>
+<p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+</section>
+</main>
+<footer>
+<p>&copy; 2026 Nombre de la Empresa. Todos los derechos reservados.</p>
+</footer>
+    
+</body>
+</html>
