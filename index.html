@@ -3,103 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta name="keywords" content="html, css, javascript">
+    <meta name="keywords" content="html, css, javascript">
     <meta name="description" content="lacteos sogamoso - pagina web
     para atencion al usuario lacteos sogamoso.">
     <meta name="author" content="Oscar Javier Perez Gutierrez">
-    <title>pagina inicio</title>
+    <title>Pagina Inicio_Lac_Sogamoso</title>
+    <!-- En el <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+     rel="stylesheet">
+     <link rel="stylesheet" href="styles_index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+     rel="stylesheet">
+   
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="assets/imagenes/logo_lac-sogamoso.jpg" alt="logo lacteos sogamoso" width="150">
-        </a>
-        <nav aria-label="menú principal"> 
-            <ul>
-                <li><a href="#inicio">inicio</a></li>
-                <li><a href="#productos">productos</a></li>
-                <li><a href="#historia">historia</a></li>
-                <li><a href="#valores">valores</a></li>
-                <li><a href="login.html">registrarse</a></li>
-                <li><a href="#pedir ahora">pedir ahora</a></li>
-                <li><a href="#contato">contacto</a></li>
-            </ul>
-        </nav>
+    <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow-sm bg-white sticky-top">
+            <a href="index.html">
+                <img src="assets/imagenes/logo_lac-sogamoso.jpg" alt="logo lacteos sogamoso" width="150" class="img-fluid">
+          
+            </a>
+            <nav class="navbar navbar-expand-lg p-0" aria-label ="menu principal">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">            
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recetas">recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#historia">historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#valores">valores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#registrarse">registrarse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pedir-ahora">pedir ahora</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">contacto</a></li>
+                    <li class="nav-item">
+                    <a class="btn btn-sm text-black" style="background-color: #8ab066;"
+                    href="login.html">
+                    inicar sesion
+                    </a>
+                    </li>
+                </ul>
+            </div>     
+            </nav>
     </header>
     <main>
-        <section id="inicio" aria-label="presentacion principal">
-            <H1>Bienvenido a la pagina Lacteos Sogamoso</H1>
-            <h1>Del prado a tu mesa</h1>
-            <P>Producimos leche, quesos y yogures con las mas altos<BR> 
-                estandares de calidad, desde siempre.para ti.</P>
-                <a href="#productos">conoce nuestros productos</a>
-                <a href="#historia">conoce nuestra trayectoria</a>
+        <section id="inicio" class="text-white text-center py-5" 
+         aria-label="presentacion principal">
+            <div class="container py-4">
+                <h1 class="display-5 fw-bold">Bienvenido a la pagina Lacteos Sogamoso</h1>
+                <h2 class="display-5 fw-bold">Del prado a tu mesa</h2>
+                <P class="lead fst-italic mx-auto" style="max-width: 700px;">Producimos leche, quesos y yogures con las mas altos<BR> 
+                estandares de calidad, desde siempre para ti.</P>
+                <a href="#producto" class="btn btn-light btn-lg mt-3 fw-bold" style="color: #00304D;">conoce nuestros productos</a>
+                <a href="#historia" class="btn btn-light btn-lg mt-3 fw-bold" style="color: #00304D;">conoce nuestra trayectoria</a>
+            </div>
         </section>
         
-         <section id="#productos" aria-labelledby="titulo-productos">
-            <h4>lo que hacemos</H2>
-            <h1 id="titulo-productos">productos que hablan<br>
-            por si solos</h1>           
+         <section id="productos" class="py-5" aria-labelledby="titulo-producto">
+            <div class="container">
+            <h2 id="titulo-productos" class="text-center fw-bold mb-5">
+                Lo que hacemos
+            </h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0">
+                    <img src="assets/imagenes/queso_doblecrema.jpg" class="card-img-top" alt="queso doble crema">
+                    <div class="card-body text-center">
+                        <h3 class="h5 card-title fw-bold">queso doble crema</h3>
+                        <p class="card-text text-secondary">Es un queso fresco, semigraso y de pasta hilada. destaca por su textura lisa, elástica y brillante, así como por un sabor suave con notas ligeramente ácidas.                               
+                        </p>
+                    </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0">
+                    <img src="assets/imagenes/leche_entera_sog.jpg" class="card-img-top" alt="leche entera">
+                    <div class="card-body text-center">
+                        <h3 class="h5 card-title fw-bold">leche entera</h3>
+                        <p class="card-text text-secondary">Es el tipo de leche líquida que conserva su contenido original de grasa intacto, mantiene todas sus vitaminas de forma natural, sabor más cremoso
+                        </p>
+                    </div>
+                    </article>
+                </div>
+
+                 <div class="col">
+                    <article class="card h-100 shadow-sm border-0">
+                    <img src="assets/imagenes/queso_campesino.jpg" class="card-img-top" alt="leche entera">
+                    <div class="card-body text-center">
+                        <h3 class="h5 card-title fw-bold">queso campesino</h3>
+                        <p class="card-text text-secondary"> es un queso fresco, no ácido, semiblando y sin maduración, elaborado con entera o parcialmente descremada. Es una insignia de la gastronomía de Colombia
+                        </p>
+                    </div>
+                    </article>
+                </div>
+
+                 <div class="col">
+                    <article class="card h-100 shadow-sm border-0">
+                    <img src="assets/imagenes/yogurth_sogamoso.jpg" class="card-img-top" alt="leche entera">
+                    <div class="card-body text-center">
+                        <h3 class="h5 card-title fw-bold">yogurth</h3>
+                        <p class="card-text text-secondary">Mucho más que un alimento. Gracias a sus cultivos fermentados y nutrientes esenciales como el calcio y las proteínas, cuida tu salud digestiva mientras disfrutas de una textura cremosa e inigualable
+                        </p>
+                    </div>
+                    </article>
+                </div>
+
+                 <div class="col">
+                    <article class="card h-100 shadow-sm border-0">
+                    <img src="assets/imagenes/arequipe_lag-sogamoso.jpg" class="card-img-top" alt="leche entera">
+                    <div class="card-body text-center">
+                        <h3 class="h5 card-title fw-bold">arequipe</h3>
+                        <p class="card-text text-secondary">Sabor, tradición y pura dulzura en cada cucharada. Nuestro arequipe captura la esencia de la repostería tradicional con una cremosidad inigualable, ideal para untar, rellenar tus postres favoritos o darte un gusto a cualquier hora del día.
+                        </p>
+                    </div>
+                    </article>
+                </div>
+            </div>
+            </div>
         </section>
-        <section id="servicios" aria-labelledby="titulo-servicios">
-<h2 id="titulo-servicios">Nuestros Servicios</h2>
-<!-- Cada servicio/producto es un article: contenido independiente -->
-<article>
-<img src="servicio1.jpg" alt="Descripción del servicio 1">
-<h3>Servicio 1</h3>
-<p>Descripción breve del servicio o producto.</p>
-</article>
-<article>
-<img src="servicio2.jpg" alt="Descripción del servicio 2">
-<h3>Servicio 2</h3>
-<p>Descripción breve del servicio o producto.</p>
-</article>
-<article>
-<img src="servicio3.jpg" alt="Descripción del servicio 3">
-<h3>Servicio 3</h3>
-<p>Descripción breve del servicio o producto.</p>
-</article>
-</section>
-<section id="nosotros" aria-labelledby="titulo-nosotros">
-<h2 id="titulo-nosotros">Sobre Nosotros</h2>
-<p>Historia breve de la Pyme, su misión y su visión.</p>
-</section>
-<section id="testimonios" aria-labelledby="titulo-testimonios">
-<h2 id="titulo-testimonios">Lo que dicen nuestros clientes</h2>
-<!-- blockquote: cita textual de un tercero (el cliente) -->
-<blockquote cite="https://ejemplo.com">
-<p>"Excelente servicio, superó nuestras expectativas."</p>
-<footer>— Nombre del Cliente, Empresa</footer>
-</blockquote>
-</section>
-<section id="contacto" aria-labelledby="titulo-contacto">
-<h2 id="titulo-contacto">Contáctanos</h2>
-<!-- address: datos de contacto del autor/organización del documento -->
-<address>
-Correo: <a href="mailto:contacto@empresa.com">contacto@empresa.com</a>
-<br>
-Teléfono: <a href="tel:+573001234567">+57 300 123 4567</a><br>
-Ubicación: Ciudad, Colombia
 
-SENA - ADSO | Guía de Maquetación HTML
+        <!-- ============ RECETAS ============ -->
+        <section id="recetas" class="py-5 bg-light" aria-labelledby="titulo-recetas">
+            <div class="container">
+                <h2 id="titulo-recetas" class="text-center fw-bold mb-5">recetas con nuestros productos</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="assets/imagenes/arequipe_lag-sogamoso.jpg" class="card-img-top" alt="postre de arequipe">
+                            <div class="card-body">
+                                <h3 class="h5 card-title fw-bold">obleas con arequipe</h3>
+                                <p class="card-text text-secondary">Un clásico boyacense: dos obleas, una capa generosa de nuestro arequipe y queso rallado al gusto.</p>
+                                <button class="btn btn-sm btn-brand" type="button" data-bs-toggle="collapse" data-bs-target="#receta1">
+                                    ver preparación
+                                </button>
+                                <div class="collapse mt-3" id="receta1">
+                                    <ol class="text-secondary ps-3 mb-0">
+                                        <li>Calienta ligeramente el arequipe para que sea fácil de untar.</li>
+                                        <li>Unta una oblea de borde a borde.</li>
+                                        <li>Agrega queso campesino rallado y cierra con la segunda oblea.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="assets/imagenes/yogurth_sogamoso.jpg" class="card-img-top" alt="batido de yogurth">
+                            <div class="card-body">
+                                <h3 class="h5 card-title fw-bold">batido de yogurth y frutas</h3>
+                                <p class="card-text text-secondary">Refrescante y nutritivo, ideal para el desayuno o después de hacer ejercicio.</p>
+                                <button class="btn btn-sm btn-brand" type="button" data-bs-toggle="collapse" data-bs-target="#receta2">
+                                    ver preparación
+                                </button>
+                                <div class="collapse mt-3" id="receta2">
+                                    <ol class="text-secondary ps-3 mb-0">
+                                        <li>Mezcla una taza de yogurth Sogamoso con fruta picada al gusto.</li>
+                                        <li>Licúa por 30 segundos hasta obtener una textura uniforme.</li>
+                                        <li>Sirve frío y decora con más fruta.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="assets/imagenes/queso_doblecrema.jpg" class="card-img-top" alt="arepa con queso">
+                            <div class="card-body">
+                                <h3 class="h5 card-title fw-bold">arepa boyacense con queso doble crema</h3>
+                                <p class="card-text text-secondary">La combinación perfecta para un desayuno tradicional lleno de sabor.</p>
+                                <button class="btn btn-sm btn-brand" type="button" data-bs-toggle="collapse" data-bs-target="#receta3">
+                                    ver preparación
+                                </button>
+                                <div class="collapse mt-3" id="receta3">
+                                    <ol class="text-secondary ps-3 mb-0">
+                                        <li>Asa la arepa por ambos lados hasta que esté dorada.</li>
+                                        <li>Ábrela y rellena con queso doble crema en tajadas.</li>
+                                        <li>Deja reposar un momento para que el queso se derrita.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-Página 4
+        <!-- ============ HISTORIA ============ -->
+        <section id="historia" class="py-5" aria-labelledby="titulo-historia">
+            <div class="container">
+                <h2 id="titulo-historia" class="text-center fw-bold mb-5">nuestra historia</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3 class="h5 fw-bold mb-1">1998 · los inicios</h3>
+                                <p class="text-secondary mb-0">Una familia campesina de Sogamoso comienza a vender leche fresca de puerta en puerta con apenas cinco vacas lecheras.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3 class="h5 fw-bold mb-1">2007 · primera planta</h3>
+                                <p class="text-secondary mb-0">Se abre la primera pequeña planta de procesamiento para elaborar quesos frescos y yogurth artesanal.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3 class="h5 fw-bold mb-1">2015 · certificación de calidad</h3>
+                                <p class="text-secondary mb-0">Obtenemos el registro sanitario del INVIMA y estandarizamos nuestros procesos de higiene y calidad.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3 class="h5 fw-bold mb-1">2026 · hoy</h3>
+                                <p class="text-secondary mb-0">Llevamos productos lácteos frescos a hogares y negocios de Boyacá, siempre fieles a las recetas de siempre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</address>
-</section>
-</main>
-<!-- ============ PIE DE PÁGINA ============ -->
-<footer>
-<p>&copy; 2026 Nombre de la Empresa. Todos los derechos reservados.</p>
-<nav aria-label="Redes sociales">
-<ul>
-<li><a href="#">Facebook</a></li>
-<li><a href="#">Instagram</a></li>
-<li><a href="#">WhatsApp</a></li>
-</ul>
-</nav>
-</footer>
+        <!-- ============ VALORES ============ -->
+        <section id="valores" class="py-5 bg-light" aria-labelledby="titulo-valores">
+            <div class="container">
+                <h2 id="titulo-valores" class="text-center fw-bold mb-5">nuestros valores</h2>
+                <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+                    <div class="col">
+                        <div class="valor-icono"><i class="bi bi-patch-check-fill"></i></div>
+                        <h3 class="h6 fw-bold">calidad</h3>
+                        <p class="text-secondary small">Seleccionamos cada materia prima y cuidamos cada paso del proceso para garantizar un producto confiable.</p>
+                    </div>
+                    <div class="col">
+                        <div class="valor-icono"><i class="bi bi-tree-fill"></i></div>
+                        <h3 class="h6 fw-bold">sostenibilidad</h3>
+                        <p class="text-secondary small">Trabajamos junto a productores locales cuidando el campo boyacense y sus recursos naturales.</p>
+                    </div>
+                    <div class="col">
+                        <div class="valor-icono"><i class="bi bi-people-fill"></i></div>
+                        <h3 class="h6 fw-bold">cercanía</h3>
+                        <p class="text-secondary small">Somos una empresa familiar, cercana a nuestros clientes y a las comunidades donde trabajamos.</p>
+                    </div>
+                    <div class="col">
+                        <div class="valor-icono"><i class="bi bi-heart-fill"></i></div>
+                        <h3 class="h6 fw-bold">tradición</h3>
+                        <p class="text-secondary small">Conservamos recetas familiares transmitidas de generación en generación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ REGISTRARSE ============ -->
+        <section id="registrarse" class="py-5" aria-labelledby="titulo-registrarse">
+            <div class="container">
+                <h2 id="titulo-registrarse" class="text-center fw-bold mb-4">crea tu cuenta</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-5">
+                        <form class="card shadow-sm border-0 p-4" novalidate>
+                            <div class="mb-3">
+                                <label for="regNombre" class="form-label">nombre completo</label>
+                                <input type="text" class="form-control" id="regNombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regCorreo" class="form-label">correo electrónico</label>
+                                <input type="email" class="form-control" id="regCorreo" name="correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regTelefono" class="form-label">teléfono</label>
+                                <input type="tel" class="form-control" id="regTelefono" name="telefono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="regClave" class="form-label">contraseña</label>
+                                <input type="password" class="form-control" id="regClave" name="clave" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="regTerminos" required>
+                                <label class="form-check-label small" for="regTerminos">
+                                    acepto los términos y condiciones
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-brand w-100">registrarme</button>
+                            <p class="text-center small text-secondary mt-3 mb-0">
+                                ¿ya tienes cuenta? <a href="login.html">inicia sesión aquí</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PEDIR AHORA ============ -->
+        <section id="pedir-ahora" class="py-5 bg-light" aria-labelledby="titulo-pedir-ahora">
+            <div class="container">
+                <h2 id="titulo-pedir-ahora" class="text-center fw-bold mb-4">haz tu pedido</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <form class="card shadow-sm border-0 p-4">
+                            <div class="mb-3">
+                                <label for="pedProducto" class="form-label">producto</label>
+                                <select class="form-select" id="pedProducto" name="producto" required>
+                                    <option selected disabled value="">selecciona un producto</option>
+                                    <option>leche entera</option>
+                                    <option>queso doble crema</option>
+                                    <option>queso campesino</option>
+                                    <option>yogurth</option>
+                                    <option>arequipe</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pedCantidad" class="form-label">cantidad</label>
+                                <input type="number" class="form-control" id="pedCantidad" name="cantidad" min="1" value="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pedDireccion" class="form-label">dirección de entrega</label>
+                                <input type="text" class="form-control" id="pedDireccion" name="direccion" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="pedTelefono" class="form-label">teléfono de contacto</label>
+                                <input type="tel" class="form-control" id="pedTelefono" name="telefono" required>
+                            </div>
+                            <button type="submit" class="btn btn-brand w-100 mb-2">confirmar pedido</button>
+                            <a href="https://wa.me/573125400500" target="_blank" rel="noopener" class="btn btn-outline-success w-100">
+                                <i class="bi bi-whatsapp"></i> o pide directo por whatsapp
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section id="contacto" class="py-5" aria-labelledby="titulo-contacto">
+            <div class="container">
+                <h2 id="titulo-contacto" class="text-center fw-bold mb-4">contáctanos</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-5">
+                        <!-- address: datos de contacto del autor/organización del documento -->
+                        <address class="mb-0">
+                            <p><i class="bi bi-envelope-fill me-2"></i>
+                                <a href="mailto:lacteossogamoso@gmail.com">lacteossogamoso@gmail.com</a>
+                            </p>
+                            <p><i class="bi bi-telephone-fill me-2"></i>
+                                <a href="tel:+573125400500">+57 312 5400 500</a>
+                            </p>
+                            <p><i class="bi bi-geo-alt-fill me-2"></i>Sogamoso-Boyacá, Colombia</p>
+                        </address>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="card shadow-sm border-0 p-4">
+                            <div class="mb-3">
+                                <label for="contNombre" class="form-label">nombre</label>
+                                <input type="text" class="form-control" id="contNombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contMensaje" class="form-label">mensaje</label>
+                                <textarea class="form-control" id="contMensaje" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-brand w-100">enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+    <!-- ============ PIE DE PÁGINA ============ -->
+    <footer class="text-center py-4 bg-white border-top">
+        <p class="mb-2">&copy; 2026 lacteos sogamoso. Todos los derechos reservados.</p>
+        <nav aria-label="Redes sociales">
+        <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a href="#">Facebook</a></li>
+        <li class="list-inline-item"><a href="#">Instagram</a></li>
+        <li class="list-inline-item"><a href="#">WhatsApp</a></li>
+        </ul>
+        </nav>
+    </footer>
+<!-- Antes de cerrar </body> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    
 </body>
 </html>
